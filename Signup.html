@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #4CAF50, #388E3C);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+        input[type="text"], input[type="password"], input[type="email"], select, input[type="tel"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus, input[type="tel"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-group input {
+            margin-right: 10px;
+        }
+        select, input[type="tel"] {
+            margin-top: 10px;
+        }
+        .form-group small {
+            font-size: 0.875rem;
+            color: #888;
+        }
+        .form-group a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .form-group a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="your-server-endpoint">
+        <h1>Create Account</h1>
+        
+        <div class="form-group">
+            <label for="fullname">Full Name : </label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Course : </label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+                <option value="Degree">Degree</option>
+                <option value="MBBS">MBBS</option>
+                <option value="BHMS">BHMS</option>
+            </select>
+        </div>
+
+        <div class="form-group radio-group">
+            <label>Gender : </label>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="others" name="gender" value="Others"> Others
+        </div>
+
+        <div class="form-group">
+            <label>Phone : </label>
+            <input type="tel" name="country" value="+91" maxlength="3" placeholder="Country Code" required>
+            <input type="tel" name="phone" maxlength="10" placeholder="Phone Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Create Password :</label>
+            <input type="password" id="password" name="password" maxlength="8" placeholder="Create Password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password :</label>
+            <input type="password" id="confirm_password" name="confirm_password" maxlength="8" placeholder="Confirm Password" required>
+        </div>
+
+        <button type="submit">Create Account</button>
+        
+        <div class="form-group">
+            <small>Already have an account? <a href="#">Login here</a></small>
+        </div>
+    </form> 
+</body>
+</html>

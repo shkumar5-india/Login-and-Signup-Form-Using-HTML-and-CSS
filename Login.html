@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: url("loginbackground.jpg");
+            color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 25px;
+            border-radius: 8px;
+            width: 300px;
+        }
+        button {
+            background-color: rgb(9, 51, 190);
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            color: yellow;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        #cancelbtn {
+            width: auto;
+            padding: 5px 8px;
+            margin: 10px 5px;
+        }
+    </style>
+    <script>
+        function message()
+        {
+            alert("Login Successful")
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1 style="text-align: center; color: white;">Login Now</h1>
+        <div>
+            <label>User Name :</label>
+            <input type="text" placeholder="Enter User Name" required>
+            <br><br>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" maxlength="8" required>
+            <br><br>
+            <button onclick="message()">Login</button>
+            <input type="checkbox" checked="checked"> Remember Me
+            <button type="button" id="cancelbtn">Cancel</button>
+            <br><br>
+            <a style="color: green" href="#">Forgot Password</a>
+            <br>
+            <a style="color: rgb(224, 55, 55);" href="Signup.html">Create Account</a>
+        </div>
+    </form>
+</body>
+</html>
